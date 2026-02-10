@@ -1,6 +1,22 @@
 name: Demo
 
-on: 
+on:
+#Webhook Event
+push:
+  branches:
+    - main
+    - Task/*
+    - feat/*
+pull_request:
+  branches:
+    - main
+    
+#Schedule event
+schedule:
+  - crone: 0 0 * * * 
+  - crone: 0 0 * * 0
+  
+#Manual event
   workflow_dispatch:
     inputs:
       areYouFeelingGood:
