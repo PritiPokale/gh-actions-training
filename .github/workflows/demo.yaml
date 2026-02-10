@@ -27,6 +27,9 @@ on:
         description: "Are you feeling good ?"
         type: boolean
         default: false
+env:
+  MY_VAR: priti
+  
 
 jobs:
   Greeting:
@@ -42,7 +45,9 @@ jobs:
           run: echo "This is step2"
         - name: Step3
           if: ${{ inputs.areYouFeelingGood }}
-          run: echo "I a"
+          run: echo "Great"
+        - name: Step4
+          run: echo ${{env.MY_VAR}}
           
       
     
