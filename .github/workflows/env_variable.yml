@@ -8,7 +8,7 @@ on:
         type: choice
         options: [Staging,Test,Production]
         default: Test
-       user_name:
+      user_name:
           description: "Enter Your Name"
           type: string
           required: true
